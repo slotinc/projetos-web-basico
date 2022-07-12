@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculadora</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- carregando o bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+    <!-- carregando js-->
+    <script type="text/javascript" src="app.js"></script>
+    
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="alert alert-info">
+                    <p><strong>Projeto Calculadora</strong></p>
+                    <p>Calculadora em Javascript e Bootstrap</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3> <span class="glyphicon glyphicon-thumbs-up"><!--adicona icone--></span> Calculadora</h3>
+                        </div>
+                        <div class="panel-body">
+                            <!-- incio do formulario -->
+                            <form name="formCalculadora" method="post">
+                                <div class="form-group">
+                                <label class="col-md-3 control-label"> Valor 1:</label>
+                                    <div class="col-md-9">
+                                        <input type="number" name="valor1" id="valor1" required class="form-control" step="0.01" placeholder="99">
+                                    </div>                                 
+                                </div>  
+                                
+                                <div class="form-group">
+                                <label class="col-md-3 control-label"> Valor 2:</label>
+                                    <div class="col-md-9">
+                                        <input type="number" name="valor2" id="valor2" required class="form-control" step="0.01" placeholder="99">
+                                    </div> 
+                                </div>   
+                                
+                                <div class="form-group">
+                                <label class="col-md-3 control-label"> Operador:</label>
+                                    <div class="col-md-9">
+                                        <select name="oper" id="oper" class="form-control">
+                                            <option value="soma">Soma</option>
+                                            <option value="subtracao">Subtração</option>
+                                            <option value="multiplicacao">Multiplicação</option>
+                                            <option value="divisao">Divisão</option>
+                                            <option value="" selected> Selecione... </option>                                            
+                                        </select>
+                                    </div> 
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label"> Resultado</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="resultado" name="resultado" readonly class="form-control"/>
+                                        </div> 
+                                </div>  
+                                
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                    </div>
+                                        <div class="col-md-9">
+                                            <input type="button" class="btn btn-success" value="Calcular" onclick="calcular()"/>
+                                        </div> 
+                                </div>  
+                                
+                                
+                            </form>
+                            
+                            
+                        </div>
+                        <div class="panel-footer">
+                            Example By &copy; - Slot Inc
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
